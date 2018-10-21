@@ -20,7 +20,7 @@ public partial class CreateNewUser :  System.Web.UI.Page
         {
             Session["User"] = txtEmail.Value;
             Status.Value = Session["User"] + " Logged In!";
-            FormsAuthentication.RedirectFromLoginPage(Session["User"] + "", true);
+            FormsAuthentication.RedirectFromLoginPage(txtEmail.Value, false);
 
         }
         else
