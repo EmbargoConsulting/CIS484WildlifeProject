@@ -9,6 +9,9 @@ public partial class Tabs : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (Session["User"] == null)
+        {
+            Response.Redirect("http://localhost:63251/Login.aspx");
+        }
     }
 }
